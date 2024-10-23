@@ -21,7 +21,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-    show-sql: true
+#    show-sql: true
     properties:
       hibernate:
         format-sql: true
@@ -30,6 +30,11 @@ spring:
   h2:
     console:
       enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug  # log
+#    org.hibernate.orm.jdbc.bind: trace  # parameter
 
 ---
 spring:
@@ -40,7 +45,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-    show-sql: true
+#    show-sql: true
     properties:
       hibernate:
         format-sql: true
@@ -48,3 +53,8 @@ spring:
   sql:
     init:
       mode: never
+
+logging:
+  level:
+    org.hibernate.SQL: debug  # log
+#    org.hibernate.orm.jdbc.bind: trace  # parameter
