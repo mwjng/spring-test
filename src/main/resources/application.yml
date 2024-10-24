@@ -21,19 +21,20 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-#    show-sql: true
+    show-sql: true
     properties:
       hibernate:
-        format-sql: true
+        highlight_sql: true
+        format_sql: true
     defer-datasource-initialization: true # (2.5~) Hibernate 초기화 이후 data.sql 실행
 
   h2:
     console:
       enabled: true
 
-logging:
-  level:
-    org.hibernate.SQL: debug  # log
+#logging:
+#  level:
+#    org.hibernate.SQL: debug  # log
 #    org.hibernate.orm.jdbc.bind: trace  # parameter
 
 ---
@@ -45,16 +46,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-#    show-sql: true
+    show-sql: true
     properties:
       hibernate:
-        format-sql: true
+        highlight_sql: true
+        format_sql: true
 
   sql:
     init:
       mode: never
 
-logging:
-  level:
-    org.hibernate.SQL: debug  # log
+#logging:
+#  level:
+#    org.hibernate.SQL: debug  # log
 #    org.hibernate.orm.jdbc.bind: trace  # parameter
